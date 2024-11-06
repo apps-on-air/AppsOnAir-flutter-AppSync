@@ -13,7 +13,7 @@ public class SwiftAppsonairFlutterAppsyncPlugin: NSObject, FlutterPlugin {
     }
     
     public static func register(with registrar: FlutterPluginRegistrar) {
-        self.channel = FlutterMethodChannel(name: "isUpdateAvailable", binaryMessenger: registrar.messenger())
+        self.channel = FlutterMethodChannel(name: "appsOnAirAppSync", binaryMessenger: registrar.messenger())
       
         let instance = SwiftAppsonairFlutterAppsyncPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)

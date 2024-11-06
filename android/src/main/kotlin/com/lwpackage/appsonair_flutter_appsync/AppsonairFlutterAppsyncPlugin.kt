@@ -20,7 +20,7 @@ class AppsonairFlutterAppsyncPlugin : FlutterPlugin, MethodCallHandler, Activity
     private lateinit var activity: Activity
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "isUpdateAvailable")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "appsOnAirAppSync")
         channel.setMethodCallHandler(this)
     }
 

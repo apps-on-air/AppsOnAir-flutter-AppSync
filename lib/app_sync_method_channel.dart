@@ -11,7 +11,7 @@ class AppSyncMethodChannel extends AppSyncPlatformInterface {
   late BuildContext context;
   bool _dialogOpen = false;
   @visibleForTesting
-  final methodChannel = const MethodChannel('isUpdateAvailable');
+  final methodChannel = const MethodChannel('appsOnAirAppSync');
 
   @override
   Future<void> initMethod(
