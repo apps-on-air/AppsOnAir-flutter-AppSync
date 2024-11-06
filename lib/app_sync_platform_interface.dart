@@ -22,6 +22,6 @@ abstract class AppSyncPlatformInterface extends PlatformInterface {
     bool showNativeUI = true,
     Widget? Function(Map<String, dynamic>)? customWidget,
   }) {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('initMethod() has not been implemented.');
   }
 }
