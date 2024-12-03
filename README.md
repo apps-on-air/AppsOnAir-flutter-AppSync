@@ -73,6 +73,19 @@ allprojects {
 
 ### iOS Setup
 
+Provide your application id in your app info.plist file.
+
+```sh
+<key>AppsOnAirAPIKey</key>
+<string>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</string>
+```
+
+If ```CFBundleDisplayName``` is not added in your app then added in your app info.plist file.
+
+```sh
+<key>CFBundleDisplayName</key>
+<string>YourAppName</string>
+```
 
 ### Flutter Setup
 
