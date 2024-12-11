@@ -1,1 +1,9 @@
 rootProject.name = 'appsonair_flutter_appsync'
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+      //  mavenLocal()    // Add this line to include your local Maven repo
+    }
+}
