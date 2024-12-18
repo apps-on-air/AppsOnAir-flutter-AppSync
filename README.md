@@ -1,7 +1,7 @@
 # AppsOnAir-flutter-AppSync
 
 
-## How it works? 
+## Features Overview
 
 - App Update 📤 
 >By enabling App Update feature, users will be able to see  any new releases published in this app.
@@ -9,8 +9,15 @@
 - App Maintenance 🛠️ 
 >By enabling Maintenance mode feature, users won’t be able to access the app and will be noted as the app is under Maintenance mode.
 
+#### To learn more about AppsOnAir AppSync, please visit the [AppsOnAir](https://documentation.appsonair.com) website
 
-## How to use?
+## Minimum Requirements
+
+- Android Gradle Plugin (AGP): Version 8.0.2 or higher
+- Kotlin: Version 1.7.10 or higher
+- Gradle: Version 8.0 or higher
+
+
 
 ### Android Setup
 
