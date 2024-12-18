@@ -29,7 +29,7 @@ class AppsonairFlutterAppsyncPlugin : FlutterPlugin, MethodCallHandler, Activity
             val arguments: Map<String, Any> = call.arguments as? Map<String, Any> ?: emptyMap()
             var options: Map<String, Any> = emptyMap()
 
-            if (!arguments.isEmpty()) {
+            if (arguments.isNotEmpty()) {
                 options = arguments
             }
 
