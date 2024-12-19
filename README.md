@@ -77,6 +77,9 @@ allprojects {
 }
 ```
 
+## Requirements
+
+Minimum deployment target: 12.0
 
 ### iOS Setup
 
@@ -94,10 +97,8 @@ If ```CFBundleDisplayName``` is not added in your app then added in your app inf
 <string>YourAppName</string>
 ```
 
-### Flutter Setup
 
-
-## Example :
+## Example
 
 Call service into init state, with default design
 
