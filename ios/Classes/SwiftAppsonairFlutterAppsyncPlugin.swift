@@ -24,6 +24,8 @@ public class SwiftAppsonairFlutterAppsyncPlugin: NSObject, FlutterPlugin {
        if("isUpdateAvailable" == call.method){
             if let args = call.arguments as? NSDictionary {
                 do{
+                /// Return error if found something missing in pods like permissions and if not any error then return the update data json
+                /// This is a logic for appsOnAir pod integration.
                     appSyncService.sync(directory: args) { appUpdateData in
                         if appUpdateData["error"] != nil {
                             result(["error" : appUpdateData["error"]])
@@ -40,7 +42,7 @@ public class SwiftAppsonairFlutterAppsyncPlugin: NSObject, FlutterPlugin {
             result({})
         }
     }
-    
+    /// Handle view visibility in flutter side need to do this for flutter screen access issue below the native screen in iOS.
     @objc public func onViewVisibilityChanged(_ notification: NSNotification) {
         if let isPresented = notification.userInfo?["isPresented"] as? Bool {
             if(isPresented == true) {

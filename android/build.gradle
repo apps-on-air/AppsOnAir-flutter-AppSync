@@ -2,12 +2,10 @@ group = "com.lwpackage.appsonair_flutter_appsync"
 version = "1.0-SNAPSHOT"
 
 buildscript {
-     ext.kotlin_version = '1.9.0'
-   // ext.kotlin_version = '1.6.21'
+    ext.kotlin_version = '1.9.0'
     repositories {
         google()
         mavenCentral()
-       // mavenLocal()
         maven { url 'https://jitpack.io'}
     }
 
@@ -21,7 +19,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-       // mavenLocal()
         maven { url 'https://jitpack.io' }
     }
 }
@@ -55,8 +52,7 @@ android {
     }
 
     dependencies {
-        implementation 'com.github.apps-on-air:AppsOnAir-android-AppSync:v1.0.3' //live
-        //implementation 'com.appsonair:appsync:1.0.3' //local
+        implementation 'com.github.apps-on-air:AppsOnAir-android-AppSync:v1.0.3'
         testImplementation("org.jetbrains.kotlin:kotlin-test")
         testImplementation("org.mockito:mockito-core:5.0.0")
     }

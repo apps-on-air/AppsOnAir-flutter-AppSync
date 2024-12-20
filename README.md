@@ -11,15 +11,14 @@
 
 #### To learn more about AppsOnAir AppSync, please visit the [AppsOnAir](https://documentation.appsonair.com) website
 
-## Minimum Requirements
+
+## Android Setup
+
+### Minimum Requirements
 
 - Android Gradle Plugin (AGP): Version 8.0.2 or higher
 - Kotlin: Version 1.7.10 or higher
 - Gradle: Version 8.0 or higher
-
-
-
-### Android Setup
 
 Add meta-data to the app's AndroidManifest.xml file under the application tag.
 
@@ -77,11 +76,11 @@ allprojects {
 }
 ```
 
-## Requirements
+## iOS Setup
 
-Minimum deployment target: 12.0
+### Minimum Requirements
 
-### iOS Setup
+iOS deployment target: 12.0
 
 Provide your application id in your app info.plist file.
 
