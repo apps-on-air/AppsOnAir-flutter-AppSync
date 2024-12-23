@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
@@ -93,6 +94,8 @@ class AppSyncMethodChannel extends AppSyncPlatformInterface {
           .invokeMethod('isUpdateAvailable', {"showNativeUI": showNativeUI});
       if (result != null && result is String) {
         return Map<String, dynamic>.from(json.decode(result));
+      } else if(result !=null && result["error"] != null){
+         log(result["error"]);
       }
       return Map<String, dynamic>.from(((result ?? {}) as Map));
     } on PlatformException catch (e) {
