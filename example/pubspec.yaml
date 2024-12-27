@@ -1,0 +1,33 @@
+name: appsonair_flutter_appsync_example
+description: "Demonstrates how to use the appsonair_flutter_appsync plugin."
+version: 0.0.1
+
+
+publish_to: 'none' 
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  appsonair_flutter_appsync:
+
+    path: ../
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  integration_test:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true
+
+
