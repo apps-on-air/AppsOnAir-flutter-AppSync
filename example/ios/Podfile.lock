@@ -1,0 +1,43 @@
+PODS:
+  - AppsOnAir-AppSync (0.2.0):
+    - AppsOnAir-Core
+  - AppsOnAir-Core (0.0.1):
+    - ReachabilitySwift
+  - appsonair_flutter_appsync (0.0.1):
+    - AppsOnAir-AppSync (~> 0.2.0)
+    - Flutter
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - ReachabilitySwift (5.2.4)
+
+DEPENDENCIES:
+  - appsonair_flutter_appsync (from `.symlinks/plugins/appsonair_flutter_appsync/ios`)
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AppsOnAir-AppSync
+    - AppsOnAir-Core
+    - ReachabilitySwift
+
+EXTERNAL SOURCES:
+  appsonair_flutter_appsync:
+    :path: ".symlinks/plugins/appsonair_flutter_appsync/ios"
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+
+SPEC CHECKSUMS:
+  AppsOnAir-AppSync: 0e3ebe292b651c90d2c4970b9978c4ed118c551c
+  AppsOnAir-Core: 220848815951591f32fd61a5b28e4a9cf83d0d96
+  appsonair_flutter_appsync: 86b9f41f91b12a5ffd540da54519b576eec92bde
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
+  ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
+
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+
+COCOAPODS: 1.16.2
