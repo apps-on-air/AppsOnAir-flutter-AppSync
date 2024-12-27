@@ -11,7 +11,7 @@ import 'app_sync_platform_interface.dart';
 class AppSyncMethodChannel extends AppSyncPlatformInterface {
   late BuildContext context;
   bool _dialogOpen = false;
-  @visibleForTesting
+  
   final methodChannel = const MethodChannel('appsOnAirAppSync');
 
   @override
