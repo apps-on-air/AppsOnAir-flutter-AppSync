@@ -1,6 +1,6 @@
 name: appsonair_flutter_appsync
 description: The AppsOnAir AppSync Flutter SDK lets you manage forced and regular app updates, as well as enable maintenance mode, directly via AppsOnAir.
-version: 0.0.1
+version: 0.0.2
 
 #homepage:
 repository: https://github.com/apps-on-air/AppsOnAir-flutter-AppSync
