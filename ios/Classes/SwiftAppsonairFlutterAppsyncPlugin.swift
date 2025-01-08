@@ -4,7 +4,7 @@ import AppsOnAir_AppSync
 
 public class SwiftAppsonairFlutterAppsyncPlugin: NSObject, FlutterPlugin {
     
-    let appSyncService = AppSyncService()
+    let appSyncService = AppSyncService.shared
     static var channel:FlutterMethodChannel = FlutterMethodChannel()
     
     public override init() {

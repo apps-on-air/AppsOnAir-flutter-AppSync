@@ -1,10 +1,10 @@
 PODS:
-  - AppsOnAir-AppSync (0.2.0):
+  - AppsOnAir-AppSync (0.3.0):
     - AppsOnAir-Core
   - AppsOnAir-Core (0.0.1):
     - ReachabilitySwift
-  - appsonair_flutter_appsync (0.0.1):
-    - AppsOnAir-AppSync (~> 0.2.0)
+  - appsonair_flutter_appsync (0.0.3):
+    - AppsOnAir-AppSync (~> 0.3.0)
     - Flutter
   - Flutter (1.0.0)
   - integration_test (0.0.1):
@@ -31,9 +31,9 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/integration_test/ios"
 
 SPEC CHECKSUMS:
-  AppsOnAir-AppSync: 0e3ebe292b651c90d2c4970b9978c4ed118c551c
+  AppsOnAir-AppSync: 24a62ef1007b6343e390576b6d19ab1f24f8268e
   AppsOnAir-Core: 220848815951591f32fd61a5b28e4a9cf83d0d96
-  appsonair_flutter_appsync: 86b9f41f91b12a5ffd540da54519b576eec92bde
+  appsonair_flutter_appsync: ba29f7b1ceed4707bbe72be71e01809e8fc12cc6
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
   ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
