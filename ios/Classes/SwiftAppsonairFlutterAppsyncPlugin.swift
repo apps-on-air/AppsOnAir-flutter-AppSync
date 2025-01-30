@@ -27,12 +27,34 @@ public class SwiftAppsonairFlutterAppsyncPlugin: NSObject, FlutterPlugin {
                 /// Return error if found something missing in pods like permissions and if not any error then return the update data json
                 /// This is a logic for appsOnAir pod integration.
                     appSyncService.sync(directory: args) { appUpdateData in
-                        if appUpdateData["error"] != nil {
-                            result(["error" : appUpdateData["error"]])
+                        if let error = appUpdateData["error"] {
+                            result(["error": error])
+                            return
                         }
-                        result(appUpdateData)
+
+                        // Create a mutable copy of the dictionary
+                        var mutableAppUpdateData = appUpdateData as? [String: Any] ?? [:]
+                        
+                        // Remove maintenanceData
+                           mutableAppUpdateData.removeValue(forKey: "maintenanceData")
+
+                        if let updateData = mutableAppUpdateData["updateData"] as? [String: Any] {
+                            let newUpdateData: [String: Any] = [
+                                "isUpdateEnabled": updateData["isIOSUpdate"] as? Bool ?? false,
+                                "buildNumber": updateData["iosBuildNumber"] as? String ?? "",
+                                "minBuildVersion": updateData["iosMinBuildVersion"] as? String ?? "",
+                                "updateLink": updateData["iosUpdateLink"] as? String ?? "",
+                                "isForcedUpdate": updateData["isIOSForcedUpdate"] as? Bool ?? false
+                            ]
+
+                            // Modify the mutable dictionary
+                            mutableAppUpdateData["updateData"] = newUpdateData
+                        }
+
+                        result(mutableAppUpdateData)
                     }
-                }catch let error {
+
+                } catch let error {
                     print("Failed to load: \(error.localizedDescription)")
                 }
             }else {

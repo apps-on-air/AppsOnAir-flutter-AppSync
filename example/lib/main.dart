@@ -15,7 +15,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   // Platform messages are asynchronous, so we initialize in an async method.
 
   @override
@@ -54,7 +53,7 @@ class _DemoAppState extends State<DemoApp> {
           children: [
             Text("Application Name : ${response["appName"]}"),
             Text(
-              "Application Version : ${response["updateData"]["androidBuildNumber"]}",
+              "Application Version : ${response["updateData"]["buildNumber"]}",
             ),
             const SizedBox(height: 20),
             ElevatedButton(

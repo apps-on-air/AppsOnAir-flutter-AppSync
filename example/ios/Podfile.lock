@@ -1,8 +1,8 @@
 PODS:
   - AppsOnAir-AppSync (0.3.0):
     - AppsOnAir-Core
-  - AppsOnAir-Core (0.0.1):
-    - ReachabilitySwift
+  - AppsOnAir-Core (0.0.2):
+    - ReachabilitySwift (~> 5.2.4)
   - appsonair_flutter_appsync (0.0.3):
     - AppsOnAir-AppSync (~> 0.3.0)
     - Flutter
@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AppsOnAir-AppSync: 24a62ef1007b6343e390576b6d19ab1f24f8268e
-  AppsOnAir-Core: 220848815951591f32fd61a5b28e4a9cf83d0d96
+  AppsOnAir-Core: 04f9cd6da5e1541a6ed248af64f51588e6257bdc
   appsonair_flutter_appsync: ba29f7b1ceed4707bbe72be71e01809e8fc12cc6
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
@@ -40,4 +40,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.14.2
