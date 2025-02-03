@@ -48,6 +48,7 @@ class _DemoAppState extends State<DemoApp> {
       ///make sure to pass false in param [showNativeUI]
       options: {'showNativeUI': false},
       customWidget: (response) {
+        /// Custom ui can be handle here as per response for showing update
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
