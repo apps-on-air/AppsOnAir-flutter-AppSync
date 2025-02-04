@@ -135,7 +135,7 @@ void initState() {
          children: [
            Text("Application Name : ${response["appName"]}"),
            Text(
-             "Application Version : ${response["updateData"]["androidBuildNumber"]}",
+             "Application Version : ${response["updateData"]["buildNumber"]}",
            ),
            const SizedBox(height: 20),
            ElevatedButton(
