@@ -15,7 +15,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   // Platform messages are asynchronous, so we initialize in an async method.
 
   @override
@@ -49,12 +48,13 @@ class _DemoAppState extends State<DemoApp> {
       ///make sure to pass false in param [showNativeUI]
       options: {'showNativeUI': false},
       customWidget: (response) {
+        /// Custom ui can be handle here as per response for showing update
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text("Application Name : ${response["appName"]}"),
             Text(
-              "Application Version : ${response["updateData"]["androidBuildNumber"]}",
+              "Application Version : ${response["updateData"]["buildNumber"]}",
             ),
             const SizedBox(height: 20),
             ElevatedButton(
