@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'appsonair_flutter_appsync'
-  s.version          = '0.0.3'
+  s.version          = '0.1.0'
   s.summary          = 'A new Flutter plugin project.'
   s.description      = <<-DESC
 A new Flutter plugin project.
@@ -18,7 +18,7 @@ A new Flutter plugin project.
   s.platform = :ios, '12.0'
   
   # AppsOnAir App Sync IOS POD
-  s.dependency 'AppsOnAir-AppSync',  '~> 0.3.0'
+  s.dependency 'AppsOnAir-AppSync',  '~> 0.4.0'
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'

@@ -41,36 +41,7 @@ class AppsonairFlutterAppsyncPlugin : FlutterPlugin, MethodCallHandler, Activity
                 callBack =
                 object : UpdateCallBack {
                     override fun onSuccess(response: String?) {
-                        response?.let {
-                            try {
-                                val jsonObject = JSONObject(it)
-
-                                // Remove maintenanceData
-                                jsonObject.remove("maintenanceData")
-
-                                val updateData = jsonObject.getJSONObject("updateData")
-
-                                // Creating a new object with modified keys
-                                val newUpdateData = JSONObject().apply {
-                                    put("isUpdateEnabled", updateData.getBoolean("isAndroidUpdate"))
-                                    put("buildNumber", updateData.getString("androidBuildNumber"))
-                                    put("minBuildVersion", updateData.optString("androidMinBuildVersion", ""))
-                                    put("updateLink", updateData.getString("androidUpdateLink"))
-                                    put("isForcedUpdate", updateData.getBoolean("isAndroidForcedUpdate"))
-                                }
-
-                                // Updating the original JSON
-                                jsonObject.put("updateData", newUpdateData)
-
-                                // Returning the modified response
-                                result.success(jsonObject.toString())
-                            } catch (e: Exception) {
-                                Log.e("JSONParsingError", "Error modifying updateData: ${e.message}")
-                                result.error("JSON_ERROR", "Failed to process update data", null)
-                            }
-                        } ?: run {
-                            result.error("NULL_RESPONSE", "Response is null", null)
-                        }
+                        result.success(response)
                     }
 
                     override fun onFailure(message: String?) {
