@@ -1,3 +1,7 @@
+## 0.1.1
+
+* iOS dependency version upgrade
+
 ## 0.1.0
 
 * Standardized the update alert response across platforms.
