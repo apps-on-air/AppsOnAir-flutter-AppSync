@@ -1,3 +1,7 @@
+## 0.1.3
+
+* iOS dependency version upgrade
+
 ## 0.1.2
 
 * iOS dependency version upgrade
