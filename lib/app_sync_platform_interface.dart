@@ -6,8 +6,6 @@ import 'app_sync_method_channel.dart';
 /// An abstract base class for defining the platform interface of the App Sync plugin.
 ///
 abstract class AppSyncPlatformInterface extends PlatformInterface {
-
-
   AppSyncPlatformInterface() : super(token: _token);
 
   /// A private token used to verify platform implementations.
