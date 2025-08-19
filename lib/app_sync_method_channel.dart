@@ -110,7 +110,8 @@ class AppSyncMethodChannel extends AppSyncPlatformInterface {
   Future<Map<String, dynamic>> _check(bool showNativeUI) async {
     String updateCheck = '';
     try {
-      final result = await methodChannel.invokeMethod('isUpdateAvailable', {"showNativeUI": showNativeUI});
+      final result = await methodChannel
+          .invokeMethod('isUpdateAvailable', {"showNativeUI": showNativeUI});
       if (result != null && result is String) {
         return Map<String, dynamic>.from(json.decode(result));
       } else if (result != null && result["error"] != null) {

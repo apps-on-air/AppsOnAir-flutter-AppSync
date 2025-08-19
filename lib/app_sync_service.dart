@@ -25,7 +25,8 @@ class AppSyncService {
       throw Exception(
           "set showNativeUI = 'true' to show default UI or/else return your custom widget in from sync() method");
     } else if (showNativeUI && customWidget != null) {
-      debugPrint("set showNativeUI = 'false' to show custom UI or/else remove custom widget from sync() method");
+      debugPrint(
+          "set showNativeUI = 'false' to show custom UI or/else remove custom widget from sync() method");
     }
     AppSyncPlatformInterface.instance.initMethod(
       context,
