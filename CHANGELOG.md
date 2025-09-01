@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Dependencies and documentation upgrade.
+
 ## 1.0.0
 
 * Dependencies upgrade
