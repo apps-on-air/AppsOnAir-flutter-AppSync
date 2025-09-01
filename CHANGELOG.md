@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Dependencies upgrade
+
 ## 0.1.4
 
 * Dependencies upgrade
