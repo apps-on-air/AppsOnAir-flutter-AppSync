@@ -22,7 +22,7 @@
 
 Add meta-data to the app's AndroidManifest.xml file under the application tag.
 
->Make sure meta-data name is “appId”.
+>Make sure meta-data name is “AppsonairAppId”.
 
 >Provide your application id in meta-data value.
 
@@ -31,7 +31,7 @@ Add meta-data to the app's AndroidManifest.xml file under the application tag.
 </application>
     ...
     <meta-data
-        android:name="appId"
+        android:name="AppsonairAppId"
         android:value="********-****-****-****-************" />
 </application>
 ```
