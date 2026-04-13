@@ -1,3 +1,7 @@
+## 1.0.3
+
+* Minor improvements  and fixes
+
 ## 1.0.2
 
 * iOS dependency version upgrade
