@@ -1,7 +1,7 @@
 package com.lwpackage.appsonair_flutter_appsync
 
 import android.app.Activity
-import android.util.Log
+import java.util.concurrent.atomic.AtomicBoolean
 
 import com.appsonair.appsync.interfaces.UpdateCallBack
 import com.appsonair.appsync.services.AppSyncService
@@ -35,17 +35,25 @@ class AppsonairFlutterAppsyncPlugin : FlutterPlugin, MethodCallHandler, Activity
                 options = arguments
             }
 
+            val resultSubmitted = AtomicBoolean(false)
+
             AppSyncService.sync(
                 activity,
                 options = options,
                 callBack =
                 object : UpdateCallBack {
                     override fun onSuccess(response: String?) {
-                        result.success(response)
+                        if (!resultSubmitted.compareAndSet(false, true)) return
+                        activity.runOnUiThread {
+                            result.success(response)
+                        }
                     }
 
                     override fun onFailure(message: String?) {
-                        result.success(message)
+                        if (!resultSubmitted.compareAndSet(false, true)) return
+                        activity.runOnUiThread {
+                            result.success(message)
+                        }
                     }
                 },
             )
