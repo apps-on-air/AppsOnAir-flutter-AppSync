@@ -2,7 +2,7 @@ import Flutter
 import UIKit
 import AppsOnAir_AppSync
 
-public class SwiftAppsonairFlutterAppsyncPlugin: NSObject, FlutterPlugin {
+public class AppsonairFlutterAppsyncPlugin: NSObject, FlutterPlugin {
     
     let appSyncService = AppSyncService.shared
     static var channel:FlutterMethodChannel = FlutterMethodChannel()
@@ -15,7 +15,7 @@ public class SwiftAppsonairFlutterAppsyncPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
         self.channel = FlutterMethodChannel(name: "appsOnAirAppSync", binaryMessenger: registrar.messenger())
       
-        let instance = SwiftAppsonairFlutterAppsyncPlugin()
+        let instance = AppsonairFlutterAppsyncPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
     }
     
@@ -46,9 +46,9 @@ public class SwiftAppsonairFlutterAppsyncPlugin: NSObject, FlutterPlugin {
     @objc public func onViewVisibilityChanged(_ notification: NSNotification) {
         if let isPresented = notification.userInfo?["isPresented"] as? Bool {
             if(isPresented == true) {
-                SwiftAppsonairFlutterAppsyncPlugin.channel.invokeMethod("openDialog", arguments:true)
+                AppsonairFlutterAppsyncPlugin.channel.invokeMethod("openDialog", arguments:true)
             } else {
-                SwiftAppsonairFlutterAppsyncPlugin.channel.invokeMethod("closeDialog", arguments:true)
+                AppsonairFlutterAppsyncPlugin.channel.invokeMethod("closeDialog", arguments:true)
             }
         }
     }
