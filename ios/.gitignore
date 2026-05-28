@@ -9,6 +9,7 @@ profile
 
 DerivedData/
 build/
+appsonair_flutter_appsync/.build/
 GeneratedPluginRegistrant.h
 GeneratedPluginRegistrant.m
 
@@ -29,10 +30,18 @@ xcuserdata
 *.moved-aside
 
 *.pyc
-*sync/
 Icon?
 .tags*
 
 /Flutter/Generated.xcconfig
 /Flutter/ephemeral/
 /Flutter/flutter_export_environment.sh
+
+# Swift Package Manager
+.build/
+**/.build/
+*.resolved
+**/*.resolved
+.swiftpm/
+**/.swiftpm/
+xcshareddata/swiftpm/

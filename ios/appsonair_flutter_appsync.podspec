@@ -13,7 +13,8 @@ A new Flutter plugin project.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  # Source files live in the SPM layout directory (shared between CocoaPods and SPM)
+  s.source_files     = 'appsonair_flutter_appsync/Sources/appsonair_flutter_appsync/**/*.{swift,h,m}'
   s.dependency 'Flutter'
   s.platform = :ios, '12.0'
   

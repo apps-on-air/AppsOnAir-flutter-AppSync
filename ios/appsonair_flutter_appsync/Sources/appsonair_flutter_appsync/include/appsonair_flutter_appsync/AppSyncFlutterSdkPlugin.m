@@ -1,4 +1,4 @@
-#import "AppsonairFlutterAppsyncPlugin.h"
+#import "AppSyncFlutterSdkPlugin.h"
 #if __has_include(<appsonair_flutter_appsync/appsonair_flutter_appsync-Swift.h>)
 #import <appsonair_flutter_appsync/appsonair_flutter_appsync-Swift.h>
 #else
@@ -8,8 +8,8 @@
 #import "appsonair_flutter_appsync-Swift.h"
 #endif
 
-@implementation AppsonairFlutterAppsyncPlugin
+@implementation AppSyncFlutterSdkPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftAppsonairFlutterAppsyncPlugin registerWithRegistrar:registrar];
+  [AppsonairFlutterAppsyncPlugin registerWithRegistrar:registrar];
 }
 @end
