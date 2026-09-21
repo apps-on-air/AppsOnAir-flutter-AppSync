@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "appsonair-flutter-appsync", targets: ["appsonair_flutter_appsync"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apps-on-air/AppsOnAir-iOS-AppSync.git", exact: "1.3.1")
+        .package(url: "https://github.com/apps-on-air/AppsOnAir-iOS-AppSync.git", exact: "1.3.2")
     ],
     targets: [
         .target(
