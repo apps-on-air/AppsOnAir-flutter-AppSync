@@ -1,32 +1,24 @@
-import 'package:flutter/material.dart';
-
 import 'package:appsonair_flutter_appsync/app_sync_service.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  // Platform messages are asynchronous, so we initialize in an async method.
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: const DemoApp(),
+      title: 'AppSync Example',
+      theme: ThemeData(
+        colorSchemeSeed: const Color(0xFF6200EE),
+        useMaterial3: true,
       ),
+      home: const DemoApp(),
     );
   }
 }
@@ -41,37 +33,44 @@ class DemoApp extends StatefulWidget {
 class _DemoAppState extends State<DemoApp> {
   @override
   void initState() {
-    AppSyncService.sync(
-      context,
-
-      ///use customWidget only if you want to use Your custom UI,
-      ///make sure to pass false in param [showNativeUI]
-      options: {'showNativeUI': false},
-      customWidget: (response) {
-        /// Custom ui can be handle here as per response for showing update
-        return Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text("Application Name : ${response["appName"]}"),
-            Text(
-              "Application Version : ${response["updateData"]["buildNumber"]}",
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Update'),
-            ),
-          ],
-        );
-      },
-    );
     super.initState();
+    // Default — shows the native AppsOnAir update / maintenance UI
+    AppSyncService.sync(context);
+
+    // ── Custom UI (optional) ─────────────────────────────────────────────
+    // Set showNativeUI: false to disable the default AppsOnAir alert.
+    // Provide customWidget to render your own update/maintenance UI.
+    // The `response` map contains app info returned by the SDK:
+    //   response["appName"]                    → app display name
+    //   response["updateData"]["buildNumber"]  → latest available build
+    // ─────────────────────────────────────────────────────────────────────
+    // AppSyncService.sync(
+    //   context,
+    //   options: {'showNativeUI': false}, // required when using customWidget
+    //   customWidget: (response) {
+    //     return Column(
+    //       mainAxisSize: MainAxisSize.min,
+    //       children: [
+    //         Text('App: ${response["appName"]}'),
+    //         Text('Version: ${response["updateData"]["buildNumber"]}'),
+    //         const SizedBox(height: 20),
+    //         ElevatedButton(
+    //           onPressed: () {}, // handle update action here
+    //           child: const Text('Update'),
+    //         ),
+    //       ],
+    //     );
+    //   },
+    // );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      appBar: AppBar(title: const Text('AppSync Example')),
+      body: const Center(
+        child: Text('AppSync is active.\nShake or force update to test.'),
+      ),
     );
   }
 }
