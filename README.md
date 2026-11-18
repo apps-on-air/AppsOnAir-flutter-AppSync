@@ -27,12 +27,12 @@ Add meta-data to the app's AndroidManifest.xml file under the application tag.
 >Provide your application id in meta-data value.
 
 
-```sh
-</application>
+```xml
+<application>
     ...
     <meta-data
-        android:name="AppsonairAppId"
-        android:value="********-****-****-****-************" />
+        android:name=”AppsonairAppId”
+        android:value=”********-****-****-****-************” />
 </application>
 ```
 
@@ -40,21 +40,20 @@ Add meta-data to the app's AndroidManifest.xml file under the application tag.
 
 >Provide your application logo in meta-data value.
 
-```sh
-</application>
+```xml
+<application>
     ...
     <meta-data
-       android:name="com.appsonair.icon"
-       android:resource="@mipmap/ic_launcher" />
+       android:name=”com.appsonair.icon”
+       android:resource=”@mipmap/ic_launcher” />
 </application>
 ```
 
 
 Add below code to setting.gradle.
 
-```sh
+```groovy
 pluginManagement {
-   ……
    repositories {
        google()
        mavenCentral()
@@ -66,7 +65,7 @@ pluginManagement {
 
 Add below code to your root level build.gradle
 
-```sh
+```groovy
 allprojects {
    repositories {
        google()
@@ -169,7 +168,7 @@ Flutter will automatically resolve `AppsOnAir-iOS-AppSync` via SPM. No additiona
 
 Call service into init state, with default design
 
-```sh
+```dart
 @override
 void initState() {
    AppSyncService.sync(context);
@@ -191,7 +190,7 @@ It is necessary to pass customWidget when you are passing param options : {‘sh
 Pass a custom widget to show a custom alert for app updates. Use this method as follows: (We have given an example for custom widget over here, users can add their own custom widget design.)
 
 
-```sh
+```dart
 @override
 void initState() {
    AppSyncService.sync(

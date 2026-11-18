@@ -1,3 +1,9 @@
+## 1.2.0
+
+* Native core SDK dependency upgrade (breaking changes in core)
+* Updated minimum Dart SDK requirement to 3.13.7 (security patch)
+* Documentation updated
+
 ## 1.1.1
 
 * iOS dependency version upgrade

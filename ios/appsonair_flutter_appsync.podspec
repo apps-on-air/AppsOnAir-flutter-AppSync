@@ -4,14 +4,14 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'appsonair_flutter_appsync'
-  s.version          = '1.0.0'
-  s.summary          = 'A new Flutter plugin project.'
+  s.version          = '1.2.0'
+  s.summary          = 'AppsOnAir AppSync Flutter SDK — manage forced updates, regular updates and maintenance mode.'
   s.description      = <<-DESC
-A new Flutter plugin project.
+The AppsOnAir AppSync Flutter SDK lets you manage forced and regular app updates, as well as enable maintenance mode, directly via AppsOnAir.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://appsonair.com'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'devtools-logicwind' => 'devtools@logicwind.com' }
   s.source           = { :path => '.' }
   # Source files live in the SPM layout directory (shared between CocoaPods and SPM)
   s.source_files     = 'appsonair_flutter_appsync/Sources/appsonair_flutter_appsync/**/*.{swift,h,m}'
@@ -19,7 +19,7 @@ A new Flutter plugin project.
   s.platform = :ios, '12.0'
   
   # AppsOnAir App Sync IOS POD
-  s.dependency 'AppsOnAir-AppSync',  '1.3.2'
+  s.dependency 'AppsOnAir-AppSync',  '1.4.0'
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'

@@ -71,9 +71,7 @@ class AppSyncMethodChannel extends AppSyncPlatformInterface {
         barrierDismissible: false,
         useSafeArea: false,
         barrierColor: Colors.transparent,
-        builder: (context) => Container(
-          color: Colors.transparent,
-        ),
+        builder: (context) => Container(color: Colors.transparent),
       );
     }
   }
@@ -93,12 +91,7 @@ class AppSyncMethodChannel extends AppSyncPlatformInterface {
       context: context,
       barrierDismissible: false,
       builder: (context) {
-        return PopScope(
-          canPop: false,
-          child: AlertDialog(
-            content: widget,
-          ),
-        );
+        return PopScope(canPop: false, child: AlertDialog(content: widget));
       },
     );
   }
@@ -110,8 +103,9 @@ class AppSyncMethodChannel extends AppSyncPlatformInterface {
   Future<Map<String, dynamic>> _check(bool showNativeUI) async {
     String updateCheck = '';
     try {
-      final result = await methodChannel
-          .invokeMethod('isUpdateAvailable', {"showNativeUI": showNativeUI});
+      final result = await methodChannel.invokeMethod('isUpdateAvailable', {
+        "showNativeUI": showNativeUI,
+      });
       if (result != null && result is String) {
         return Map<String, dynamic>.from(json.decode(result));
       } else if (result != null && result["error"] != null) {
@@ -122,7 +116,7 @@ class AppSyncMethodChannel extends AppSyncPlatformInterface {
       updateCheck = "Failed to check for update: '${e.message}'.";
     }
     if (kDebugMode) {
-      print(updateCheck);
+      debugPrint(updateCheck);
     }
     return {"exception": updateCheck};
   }
