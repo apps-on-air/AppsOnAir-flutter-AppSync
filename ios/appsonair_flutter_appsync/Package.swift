@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "appsonair_flutter_appsync",
     platforms: [
-        .iOS("12.0")
+        .iOS("15.0")
     ],
     products: [
         .library(name: "appsonair-flutter-appsync", targets: ["appsonair_flutter_appsync"])

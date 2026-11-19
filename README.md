@@ -79,7 +79,7 @@ allprojects {
 
 ### Minimum Requirements
 
-iOS deployment target: 12.0
+iOS deployment target: 15.0
 
 Provide your application id in your app info.plist file.
 
