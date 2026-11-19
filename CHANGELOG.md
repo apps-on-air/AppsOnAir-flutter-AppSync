@@ -1,3 +1,7 @@
+## 1.2.1
+
+* Raised minimum iOS deployment target to 15.0.
+
 ## 1.2.0
 
 * Native core SDK dependency upgrade (breaking changes in core)
